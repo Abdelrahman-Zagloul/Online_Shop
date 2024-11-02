@@ -1,0 +1,69 @@
+.div1 {
+  background-image: url('https://www.rmhtailor.com/assets/images/mid_banner.webp');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  margin-bottom: 18%;
+  margin-top: 60px;
+}
+.div1 .card-1 {
+  max-width: 1170px;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 445.8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 15px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.div1 .card-1 .span1 {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.div1 .card-1 .span1 p {
+  font-weight: 500;
+  color: #222;
+  font-size: 3vw;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.div1 .card-1 .span2 {
+  margin-top: -10px;
+  width: 100%;
+}
+
+.div1 .card-1 .span2 p {
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: #222;
+}
+
+button.btn-explore {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  background-color: #000;
+  font-size: 1.2vw;
+  padding: 10px 30px;
+  border-radius: 10px;
+  color: #FFF;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; 
+}
+
+button.btn-explore:hover {
+  background-color: rgb(228, 16, 16);
+  color: #ffffff;
+}

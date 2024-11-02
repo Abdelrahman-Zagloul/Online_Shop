@@ -1,0 +1,55 @@
+ <div class="container mb-5">
+  <div class="container head mt-3">
+    <div class="div1">
+      <h4>Total Items in Cart: {{ cartCount }}</h4>
+    </div>
+    <div class="div2">
+      <a title="Add new Product" (click)="goToProductForm()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#fff" class="bi bi-plus-lg" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div class="row ms-3">
+    <div *ngFor="let product of products; let i = index" class="card card1 ms-3 mb-5">
+      <img [src]="'../../image/' + product.imgSrc" class="card-img-top" alt="Not Found">
+      <div class="card-body">
+        <h5 class="card-title text-center">{{ product.id }}</h5>
+        <p class="card-text">Type: {{ product.name }}</p>
+        <p class="card-text">Price: {{ product.price }}</p>
+        <p class="card-text">Quantity: {{ product.quantity }}</p>
+        <div class="d-flex justify-content-around mt-3">
+          <a title="Add to Cart" (click)="addToCart(product)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="blue" class="bi bi-cart-plus" viewBox="0 0 16 16">
+              <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+            </svg>
+          </a>
+          <a title="Edit" class="edit" (click)="goToProductForm()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="green" class="bi bi-pencil-square" viewBox="0 0 16 16">
+              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+            </svg>
+          </a>
+          <a title="View" (click)="goToDetails(product.id)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="green" class="bi bi-eye-fill" viewBox="0 0 16 16">
+              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+              <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+            </svg>
+          </a>
+          <a class="delete" title="Delete" (click)="deleteProduct(product.id)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="red" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+              <path d="M11 1.5v1H5v-1h6zM1 4v1h1v8.5a2.5 2.5 0 0 0 2.5 2.5h7A2.5 2.5 0 0 0 14 13.5V5h1V4H1zm2.5 1a.5.5 0 0 1 .5-.5H12a.5.5 0 0 1 .5.5v8.5a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 3 13.5V5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button *ngIf="ScrollToTop" class="scroll-top" (click)="scrollToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capslock-fill" viewBox="0 0 16 16">
+      <path d="M7.27 1.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1H1.654C.78 9.5.326 8.455.924 7.816zM4.5 13.5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1z"/>
+    </svg>
+  </button>
+</div>

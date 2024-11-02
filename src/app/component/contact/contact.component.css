@@ -1,0 +1,14 @@
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    margin: 20px;
+  }
+}

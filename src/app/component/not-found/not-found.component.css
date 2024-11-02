@@ -1,0 +1,12 @@
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+.text-danger {
+  color: #dc3545 !important;
+}
+.text-secondary {
+  color: #6c757d !important;
+}
+.btn-warning {
+  color: #212529;
+}

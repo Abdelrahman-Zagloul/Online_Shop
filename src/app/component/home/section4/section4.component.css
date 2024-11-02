@@ -1,0 +1,36 @@
+.text {
+  text-align: center;
+  font-size: 40px;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.img {
+  text-align: center;
+}
+.img img {
+  margin-top: -50px;
+  width: 250px;
+}
+.cards {
+  width: 300px;
+  height: 83px;
+  position: relative;
+  padding-left: 70px;
+  display: flex;
+  align-items: center;
+}
+.cards .icon {
+  position: absolute;
+  left: 20px;
+}
+.cards .texta {
+  display: inline-block;
+}
+.cards .texta h4 {
+  margin: 0;
+}
+.cards .texta p {
+  margin: 0;
+}

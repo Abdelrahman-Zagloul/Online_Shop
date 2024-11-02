@@ -1,0 +1,52 @@
+.div-parent {
+  background-color: #eee;
+  padding: 40px 0;
+}
+
+.img-ban {
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.div-new {
+  margin: 0;
+  text-align: center;
+}
+
+.text-new {
+  color: #222222;
+  font-size: 3rem;
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 20px;
+}
+
+.text-special {
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: #222222;
+  margin-bottom: 30px;
+}
+.btn-explore{
+  margin-left: 33%
+}
+.btn-explore button {
+  color: #ffffff;
+  background-color: #222222;
+  border: 2px solid #222222;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  padding: 14px 36px;
+  border-radius: 12px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-explore button:hover {
+  background-color: #ffffff;
+  color: #222222;
+  border-color: #222222;
+}

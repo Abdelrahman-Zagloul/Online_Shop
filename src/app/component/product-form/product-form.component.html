@@ -1,0 +1,30 @@
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="col-6 form-container mt-3 p-4 border rounded shadow">
+    <div class="text-center mb-4">
+      <h2>Add or Edit Product</h2>
+    </div>
+      <div class="mb-3">
+        <label for="Image" class="form-label">Image</label>
+        <input type="text" id="Image" class="form-control" [(ngModel)]="product.imgSrc">
+      </div>
+      <div class="mb-3">
+        <label for="ID" class="form-label">ID</label>
+        <input type="text" id="ID" class="form-control" [(ngModel)]="product.id">
+      </div>
+      <div class="mb-3">
+        <label for="Type" class="form-label">Type</label>
+        <input type="text" id="Type" class="form-control" [(ngModel)]="product.name">
+      </div>
+      <div class="mb-3">
+        <label for="Price" class="form-label">Price</label>
+        <input type="text" id="Price" class="form-control" [(ngModel)]="product.price">
+      </div>
+      <div class="mb-3">
+        <label for="Quantity" class="form-label">Quantity</label>
+        <input type="text" id="Quantity" class="form-control" [(ngModel)]="product.quantity">
+      </div>
+      <div class="text-center">
+        <button type="button" class="btn btn-primary" (click)="addProduct()">Add Product</button>
+      </div>
+  </div>
+</div>
